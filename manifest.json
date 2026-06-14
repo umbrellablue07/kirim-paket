@@ -1,7 +1,6 @@
 {
   "short_name": "KirimPaket",
   "name": "KirimPaket - Jasa Pengiriman PWA",
-
   "icons": [
     {
       "src": "assets/images/icon-192.png",
@@ -14,7 +13,6 @@
       "sizes": "512x512"
     }
   ],
-
   "start_url": "./index.html",
   "background_color": "#1e3a8a",
   "theme_color": "#1e3a8a",
