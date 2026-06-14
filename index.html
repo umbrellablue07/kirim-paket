@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>KirimPaket - Jasa Pengiriman</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="assets/images/icon-192.png">
+    <meta name="theme-color" content="#1e3a8a">
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="logo-container">
+            <h2>Kirim<span>Paket</span></h2>
+        </div>
+    </header>
+
+    <main class="app-content">
+        
+        <section id="page-home" class="page active">
+            <div class="welcome-card">
+                <h3>Halo, Mau Kirim Paket ke Mana?</h3>
+                <p>Nikmati pengiriman cepat, aman, dan tepercaya sampai ke tujuan.</p>
+            </div>
+            
+            <div class="quick-menu">
+                <button onclick="switchPage('ongkir')">📊 Cek Tarif Ongkir</button>
+                <button onclick="switchPage('lacak')">🔍 Lacak Resi Paket</button>
+            </div>
+        </section>
+
+        <section id="page-ongkir" class="page">
+            <div class="card">
+                <h3>📊 Cek Tarif Pengiriman</h3>
+                <div class="form-group">
+                    <label>Kota Asal</label>
+                    <input type="text" id="asal" placeholder="Contoh: Jakarta">
+                </div>
+                <div class="form-group">
+                    <label>Kota Tujuan</label>
+                    <input type="text" id="tujuan" placeholder="Contoh: Surabaya">
+                </div>
+                <div class="form-group">
+                    <label>Berat Paket (Kg)</label>
+                    <input type="number" id="berat" value="1" min="1">
+                </div>
+                <button class="btn-primary" id="btn-cek-ongkir">Hitung Ongkir</button>
+                
+                <div id="hasil-ongkir" class="result-container"></div>
+            </div>
+        </section>
+
+        <section id="page-lacak" class="page">
+            <div class="card">
+                <h3>🔍 Lacak Posisi Paket</h3>
+                <div class="form-group">
+                    <label>Masukkan Nomor Resi</label>
+                    <input type="text" id="no-resi" placeholder="Contoh: KP123456789">
+                </div>
+                <button class="btn-primary" id="btn-lacak-resi">Cari Paket</button>
+                
+                <div id="hasil-lacak" class="result-container"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <nav class="bottom-nav">
+        <button class="nav-item active" onclick="switchPage('home')" id="nav-home">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Home</span>
+        </button>
+        <button class="nav-item" onclick="switchPage('ongkir')" id="nav-ongkir">
+            <span class="nav-icon">📊</span>
+            <span class="nav-label">Cek Ongkir</span>
+        </button>
+        <button class="nav-item" onclick="switchPage('lacak')" id="nav-lacak">
+            <span class="nav-icon">🔍</span>
+            <span class="nav-label">Lacak Resi</span>
+        </button>
+    </nav>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/ongkir.js"></script>
+    <script src="assets/js/lacak.js"></script>
+</body>
+</html>
